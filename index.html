@@ -1,0 +1,51 @@
+<!doctype html><html><head><style>    .background{ 
+      background-image: url('https://i.imgur.com/rvQbzus.jpg');
+      width:1200px;
+      height:800px;
+      margin: auto;
+      position: relative;
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: -32;
+    }
+    #face {
+      position: absolute;
+      top:56px;
+      left:499px;
+       z-index: -30;
+        width: 14%;
+    }
+
+    .controls {
+      margin: 30px auto 20px auto;
+      text-align: center;
+      z-index: 30;
+    }
+    #size {
+      width:300px;
+    }
+    #percentage {
+      display: inline-block;
+      width:100px;
+    }</style></head><body>
+      <script nomodule src="https://unpkg.com/browser-es-module-loader/dist/babel-browser-build.js"></script>
+      <script nomodule src="https://unpkg.com/browser-es-module-loader"></script>
+    <div class="controls">
+	<input type="range" id="size" name="size" min="10" max="120" value="100">
+	<label id="percentage">100%</label>
+</div>
+<br>
+<div class="background">
+	<img id="face" src="https://i.imgur.com/NW3thUw.png" />
+
+  </div><script type="text/javascript">var slider = document.getElementById("size");
+var percentage = document.getElementById("percentage");
+var face = document.getElementById("face");
+
+slider.addEventListener("input", function () {
+  percentage.innerText = slider.value + "%";
+  face.style.transform = "scale(" + (slider.value / 100) + "," + (slider.value / 100) + ")";
+
+});
+
+</script></body><html>
