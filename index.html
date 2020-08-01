@@ -38,7 +38,12 @@
 <div class="background">
 	<img id="face" src="https://i.imgur.com/NW3thUw.png" />
 
-  </div><script type="text/javascript">var slider = document.getElementById("size");
+  </div>
+	<audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 8000)">
+    <source src="Kalimba.mp3" type="audio/mp3" />
+</audio>
+	
+	<script type="text/javascript">var slider = document.getElementById("size");
 var percentage = document.getElementById("percentage");
 var face = document.getElementById("face");
 
